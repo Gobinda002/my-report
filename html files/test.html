@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /** ========= Navbar ================== **/
+        
+
+*{    
+  font-family: 'Poppins', sans-serif;
+  padding: 0; margin: 0;    
+  box-sizing: border-box;    
+  outline: none; border: none;
+  transition: all.2s linear;
+  box-sizing: border-box;    
+}
+
+/** SCROLLBAR **/
+
+::-webkit-scrollbar{
+  width: .9rem;
+}
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+::-webkit-scrollbar-thumb{
+  background: var(--maincolor);
+  border-radius: 1rem;
+  
+}
+
+
+body{
+  background-color: #fff;
+  font-family: 'arial',sans-serif;
+}
+
+:root{
+  --maincolor:#fc7c12;
+  --cards:4;
+  --cardHeight:87vh;
+  --cardToppadding:25px;
+  --cardMargin:77px;
+  --secondarycolor:#d66500; 
+}
+
+        header .sticky {
+            background: var(--maincolor);
+            box-shadow: 1px 1px 18px #808080;
+
+        }
+
+        header {
+            display: block;
+            width: 70%;
+            background: red;
+            position: fixed;
+            top: 3rem;
+            left: 15%;
+            z-index: 100;
+            transition: .3s linear;
+            border-radius: 7rem;
+
+        }
+
+        .nav-section.shadow {
+            box-shadow: var(--box-shadow);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: .15rem;
+            margin-left: 3rem;
+
+            & img {
+                width: 3.8rem;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            gap: 4rem;
+
+            & a {
+                color: var(--text-color);
+                font-size: 1.6rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                position: relative;
+                transition: .3s linear;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    background: var(--mainecolor);
+                    height: .2rem;
+                    width: 100%;
+                    bottom: -.2rem;
+                    left: 0;
+                    transform: scaleX(0);
+                    transition: .3s linear;
+                }
+            }
+        }
+
+        .navbar a:hover::after {
+            transform: scale(1);
+
+        }
+
+        .navbar a:hover {
+            color: #fff;
+        }
+
+        .inout {
+            display: flex;
+            gap: 2rem;
+            margin-right: 3rem;
+
+            & a {
+                color: var(--text-color);
+                font-size: 1.6rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                position: relative;
+                transition: .3s linear;
+            }
+        }
+
+        .inout a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav-section">
+        <div class="nav ">
+            <a href="#" class="logo">
+                <img src="/icon/logod.png" alt="logo">
+                NepTours</a>
+
+            <i class="bx bx-menu" id="menu"></i>
+
+            <ul class="navbar">
+                <li><a href="#">home</a></li>
+                <li><a href="#">Packages</a></li>
+                <li><a href="#3">Services</a></li>
+                <li><a href="#scholorship">Review</a></li>
+                <li><a href="#5">contact</a></li>
+            </ul>
+
+            <ul class="inout">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html"> Signup</a></li>
+            </ul>
+        </div>
+    </header>
+</body>
+
+</html>

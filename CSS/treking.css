@@ -1,0 +1,152 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: all.2s linear;
+  box-sizing: border-box;
+}
+
+/** SCROLLBAR **/
+
+::-webkit-scrollbar {
+  width: .9rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--maincolor);
+  border-radius: 1rem;
+
+}
+
+
+body {
+  background-color: #fff;
+  font-family: 'arial', sans-serif;
+}
+
+:root {
+  --maincolor: #fc7c12;
+  --cards: 4;
+  --cardHeight: 87vh;
+  --cardToppadding: 25px;
+  --cardMargin: 77px;
+  --secondarycolor: #d66500;
+}
+
+
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#cards {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  padding-bottom: calc(var(--cards)*var(--cardToppadding));
+  margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+  --index: 2;
+}
+
+#card2 {
+  --index: 3;
+}
+
+#card3 {
+  --index: 4;
+}
+
+#card4 {
+  --index: 5;
+}
+
+#card5 {
+  --index: 6;
+}
+
+.card {
+  position: sticky;
+  top: 0;
+  padding-top: calc(var(--index)*var(--cardToppadding));
+
+}
+
+#card1 .card-body {
+  background-color: aqua;
+
+}
+
+#card2 .card-body {
+  background-color: aqua;
+
+}
+
+#card3 .card-body {
+  background-color: aqua;
+
+}
+
+#card4 .card-body {
+  background-color: aqua;
+
+}
+
+.card-body {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 50px;
+  height: 80vh;
+  justify-items: center;
+  display: flex;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-transform: capitalize;
+}
+
+img {
+  height: 67vh;
+  width: 100vh;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 10px 0 0 -10vh;
+}
+
+.desc {
+  width: 70vh;
+  
+}
+
+table {
+  border-collapse: collapse;
+  border-color: inherit;
+  text-indent: 0;
+  border-spacing: 2px;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}

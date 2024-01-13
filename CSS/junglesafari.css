@@ -1,0 +1,19 @@
+body{
+    background-color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+#cards{
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards)),var(--cardheight);
+    margin-bottom: var(--cardmargin);
+}
+#card1{
+  
+}
