@@ -5,173 +5,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        /** ========= Navbar ================== **/
-        
+    <link rel="stylesheet" href="/CSS/test.css">
 
-*{    
-  font-family: 'Poppins', sans-serif;
-  padding: 0; margin: 0;    
-  box-sizing: border-box;    
-  outline: none; border: none;
-  transition: all.2s linear;
-  box-sizing: border-box;    
-}
-
-/** SCROLLBAR **/
-
-::-webkit-scrollbar{
-  width: .9rem;
-}
-::-webkit-scrollbar-track{
-  background: transparent;
-}
-::-webkit-scrollbar-thumb{
-  background: var(--maincolor);
-  border-radius: 1rem;
-  
-}
-
-
-body{
-  background-color: #fff;
-  font-family: 'arial',sans-serif;
-}
-
-:root{
-  --maincolor:#fc7c12;
-  --cards:4;
-  --cardHeight:87vh;
-  --cardToppadding:25px;
-  --cardMargin:77px;
-  --secondarycolor:#d66500; 
-}
-
-        header .sticky {
-            background: var(--maincolor);
-            box-shadow: 1px 1px 18px #808080;
-
-        }
-
-        header {
-            display: block;
-            width: 70%;
-            background: red;
-            position: fixed;
-            top: 3rem;
-            left: 15%;
-            z-index: 100;
-            transition: .3s linear;
-            border-radius: 7rem;
-
-        }
-
-        .nav-section.shadow {
-            box-shadow: var(--box-shadow);
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 2rem 0;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: .8rem;
-            font-size: 2.5rem;
-            color: var(--text-color);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: .15rem;
-            margin-left: 3rem;
-
-            & img {
-                width: 3.8rem;
-            }
-        }
-
-        .navbar {
-            display: flex;
-            gap: 4rem;
-
-            & a {
-                color: var(--text-color);
-                font-size: 1.6rem;
-                text-transform: uppercase;
-                font-weight: 600;
-                position: relative;
-                transition: .3s linear;
-
-                &::after {
-                    position: absolute;
-                    content: '';
-                    background: var(--mainecolor);
-                    height: .2rem;
-                    width: 100%;
-                    bottom: -.2rem;
-                    left: 0;
-                    transform: scaleX(0);
-                    transition: .3s linear;
-                }
-            }
-        }
-
-        .navbar a:hover::after {
-            transform: scale(1);
-
-        }
-
-        .navbar a:hover {
-            color: #fff;
-        }
-
-        .inout {
-            display: flex;
-            gap: 2rem;
-            margin-right: 3rem;
-
-            & a {
-                color: var(--text-color);
-                font-size: 1.6rem;
-                text-transform: uppercase;
-                font-weight: 600;
-                position: relative;
-                transition: .3s linear;
-            }
-        }
-
-        .inout a:hover {
-            color: #fff;
-        }
-    </style>
 </head>
 
 <body>
-    <header class="nav-section">
-        <div class="nav ">
-            <a href="#" class="logo">
-                <img src="/icon/logod.png" alt="logo">
-                NepTours</a>
+    <section class="review-container">
 
-            <i class="bx bx-menu" id="menu"></i>
+        <div class="blog-post">
+            <div class="head-title">
+                <h1>Interesting Blogs</h1>
+                <div class="title-line">
+                    <div class="tl-1"></div>
+                    <div class="tl-2"></div>
+                    <div class="tl-3"></div>
+                </div>
+            </div>
 
-            <ul class="navbar">
-                <li><a href="#">home</a></li>
-                <li><a href="#">Packages</a></li>
-                <li><a href="#3">Services</a></li>
-                <li><a href="#scholorship">Review</a></li>
-                <li><a href="#5">contact</a></li>
-            </ul>
-
-            <ul class="inout">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html"> Signup</a></li>
-            </ul>
+            <div class="blog-slider">
+                <div class="collab-wrapper s">
+                    <div class="collabe-bg " style="background-image:url('/images/501211-everest-4k-wallpaper.jpg')">
+                    </div>
+                    <div class="news-detail">
+                        <h3>
+                            <a href="#">The
+                                Right Trekking Company For Your Everest Base Camp Trek
+                            </a>
+                        </h3>
+                        <ul class="post-info">
+                            <li>
+                                <i class="far fa-clock"></i> Apr 25
+                            </li>
+                        </ul>
+                        <p>Attractive Travels and Tours is Nepal's most reputable trekking company that offers
+                            various trekking packages. One of the....
+                        </p>
+                        <a href="#" class="blog-read">Read More</a>
+                    </div>
+                </div>
+                <div class="collab-wrapper s">
+                    <div class="collabe-bg "
+                        style="background-image:url('https://www.attractivetravelnepal.com/wp-content/uploads/2023/04/kathmandu-pokhara-tour.jpg')">
+                    </div>
+                    <div class="news-detail">
+                        <h3>
+                            <a
+                                href="https://www.attractivetravelnepal.com/pokhara-or-kathmandu-which-city-should-you-visit/">Pokhara
+                                or Kathmandu? Which City Should You Visit in Nepal?
+                            </a>
+                        </h3>
+                        <ul class="post-info">
+                            <li>
+                                <i class="far fa-clock"></i> Apr 09
+                            </li>
+                        </ul>
+                        <p>Pokhara or Kathmandu? Is it the question dwelling in your mind after planning your
+                            trip to Nepal with....
+                        </p>
+                        <a href="https://www.attractivetravelnepal.com/pokhara-or-kathmandu-which-city-should-you-visit/"
+                            class="blog-read">Read More
+                        </a>
+                    </div>
+                </div>
+                <div class="collab-wrapper s">
+                    <div class="collabe-bg "
+                        style="background-image:url('https://www.attractivetravelnepal.com/wp-content/uploads/2023/04/everest-basecamp-trek.jpg')">
+                    </div>
+                    <div class="news-detail">
+                        <h3>
+                            <a href="https://www.attractivetravelnepal.com/everest-base-camp-trek-difficulty/">Everest
+                                Base Camp Trek Difficulty: What To Expect
+                            </a>
+                        </h3>
+                        <ul class="post-info">
+                            <li>
+                                <i class="far fa-clock"></i> Apr 03
+                            </li>
+                        </ul>
+                        <p>Did you know that the "Everest Base Camp Trek" is one of the most searched terms in
+                            Nepal,....
+                        </p>
+                        <a href="https://www.attractivetravelnepal.com/everest-base-camp-trek-difficulty/"
+                            class="blog-read">Read More
+                        </a>
+                    </div>
+                </div>
+                <div class="collab-wrapper s">
+                    <div class="collabe-bg "
+                        style="background-image:url('https://www.attractivetravelnepal.com/wp-content/uploads/2023/03/kathmandu-tour.jpg')">
+                    </div>
+                    <div class="news-detail">
+                        <h3>
+                            <a
+                                href="https://www.attractivetravelnepal.com/frequently-asked-questions-about-kathmandu-tour/">Frequently
+                                Asked Questions About Kathmandu Tour
+                            </a>
+                        </h3>
+                        <ul class="post-info">
+                            <li>
+                                <i class="far fa-clock"></i> Mar 30
+                            </li>
+                        </ul>
+                        <p>The Kathmandu tour is one of the bucket lists of many people worldwide. When we find
+                            something interesting....
+                        </p>
+                        <a href="https://www.attractivetravelnepal.com/frequently-asked-questions-about-kathmandu-tour/"
+                            class="blog-read">Read More
+                        </a>
+                    </div>
+                </div>
+                <div class="collab-wrapper s">
+                    <div class="collabe-bg "
+                        style="background-image:url('https://www.attractivetravelnepal.com/wp-content/uploads/2023/03/unique-cultura-experience.jpg')">
+                    </div>
+                    <div class="news-detail">
+                        <h3>
+                            <a href="https://www.attractivetravelnepal.com/unique-cultural-experiences-of-nepal/">Unique
+                                Cultural Experiences of Nepal
+                            </a>
+                        </h3>
+                        <ul class="post-info">
+                            <li>
+                                <i class="far fa-clock"></i> Mar 26
+                            </li>
+                        </ul>
+                        <p>Nepal is a country that is blessed with unique cultural experiences that span back
+                            several centuries. It is....
+                        </p>
+                        <a href="https://www.attractivetravelnepal.com/unique-cultural-experiences-of-nepal/"
+                            class="blog-read">Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+        <div class="blog-post">
+            <h2>Annapurna Base Camp (ABC) Trek</h2>
+            <p class="date">As an American who has trekked and climbed often in the Himalayas nothing has compared to
+                service, kindness, professionalism, helpfullness and caring that I have always received from Mr. Prakash
+                and his company Attractive Travels and Tours or www.adventurenepaltrip.com on many of my trips to...</p>
+            <p class="author">By <span>Tractive</span> Rob Lan (America)</p>
+        </div>
+
+
+    </section>
+
 </body>
 
 </html>

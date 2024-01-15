@@ -1,0 +1,52 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.review-container{
+	background:#f1faee;
+	display: flex;
+	margin: 7rem 10rem;	
+	height: 45rem;
+    
+}
+
+.blog-post{
+    padding: 5rem 10rem;
+
+    & h1{
+        text-align: center;
+    }
+}
+
+/* this is for --0-- */
+.title-line{
+    margin-top: -1rem;
+    text-align: center;
+
+}
+.tl-1 {
+    width: 85px;
+    height: 2px;
+    display: inline-block;
+    background: #f9a84c;
+}
+.tl-2 {
+    display: inline-block;
+    height: 12px;
+    margin: 0 5px;
+    position: relative;
+    top: 5px;
+    width: 12px;
+    border: 2px solid #f9a84c;
+    border-radius: 50px;
+}
+
+.tl-3 {
+    width: 85px;
+    height: 2px;
+    display: inline-block;
+    background: #f9a84c;
+}
+
+/* this end is for --0-- */
