@@ -2,17 +2,16 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-}
-.review-container{
-	background:#f1faee;
-	display: flex;
-	margin: 7rem 10rem;	
-	height: 45rem;
     
 }
 
+.review{
+	background:#f1faee; 
+	display: flex;    
+}
+
 .blog-post{
-    padding: 5rem 10rem;
+    margin: 5rem 10rem;
 
     & h1{
         text-align: center;
@@ -50,3 +49,17 @@ body {
 }
 
 /* this end is for --0-- */
+
+.blog-slider{
+    background:#fff;
+    height: 20rem;
+}
+
+/* .img{
+    height: 2px;
+    width: 2px;
+} */
+.news-detail{
+    background: red;
+    height: 5rem;
+}
