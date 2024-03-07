@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//For swiper JS 
 
 var swiper = new Swiper(".mySwiper", {
     spaceBetween: 30,
