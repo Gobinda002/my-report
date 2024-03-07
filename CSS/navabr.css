@@ -245,7 +245,7 @@ header {
 .home{ 
     height: 100vh;
     width: 100%;
-    background-image: url('/images/501211-everest-4k-wallpaper.jpg');
+    background-image: url('../images/501211-everest-4k-wallpaper.jpg');
     background-size: cover;   
     background-position: center;
 }
@@ -655,7 +655,7 @@ header {
 /*******  Footer Section  ******/
 footer{  
 
-    background-image: url('/images/bf footer.png');
+    background-image: url('../images/bf footer.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
