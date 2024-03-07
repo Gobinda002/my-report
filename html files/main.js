@@ -26,4 +26,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  
+    autoplay: {
+      delay: 25000,
+      disableOnInteraction: false,
+    },
+  
+    slidesPerView: 1,
+    loop: true,
+  });
+  
    

@@ -476,83 +476,179 @@ header {
 
 /*******  Contact Section ******/
 
-.top{
-    background-color:var(--maincolor);
-    height: 28rem;
-    width: 90%;    
-    margin:3rem auto;
-   overflow: hidden;
-   border-radius: 2rem;
+.mixed {
+    padding: 60px 0;
+    background-color:#f1faee;
 }
 
-.image{
-    float: right;
-    width: 67rem;
-    height:23rem;
-    margin: 2rem ;
-    border-radius: 2rem;
-}
-
-.contact-title{
-    float: left;
-    font-size: 3rem;
-    padding: 5rem 12rem; 
-    box-sizing: border-box; /* Include padding in the width */
-}
-
-.support-cs {
+.ro {
     display: flex;
-    justify-content: center;
-    margin-top: 90px;
-    gap: 50px;
+    flex-wrap: wrap;
+    padding-left: 25rem;
+    gap: 3em;
 }
 
-.talk {
-    background-color: darkgray;
-    border: 2px solid;
-    border-radius: 30px;
+.blo {
+    height: 655px;
+    width: 445px;
+    padding: 0px 15px;
+}
+
+/* for head section */
+.head-title{
     text-align: center;
-    padding: 30px;
-    max-width: 500px; /* Adjust the max-width as needed */
-    height: 35rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
 }
 
-.fa-solid {
-    font-size: 2em;
-    margin-bottom: 15px;
+.head-title .title__primary{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    margin-top: 0;
+    text-transform: capitalize;
+    font-size: 40px;
+    color: #253d52;
+    font-weight: 600;
 }
 
-.talk h2 {
-    font-size: 3.1rem;
-    margin-bottom: 10px;
+.title-line{
+    margin-top: -10px;
 }
 
-.talk p {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.bton {
-    font-size: 20px; /* Increased font size */
-    padding: 15px 30px; /* Adjusted padding for a slightly bigger button */
-    text-decoration: none;
-    background-color: var(--maincolor);
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+.tl-1 {
+    width: 90px;
+    height: 2px;
     display: inline-block;
-    transition:  0.3s; /* Add a smooth transition for the hover effect */
-    border-radius: 2rem;
+    background: #f9a84c;
+  }
+  
+  .tl-2 {
+    display: inline-block;
+    height: 12px;
+    margin: 0 5px;
+    position: relative;
+    top: 5px;
+    width: 12px;
+    border: 2px solid #f9a84c;
+    border-radius: 50px;
+  }
+  
+  .tl-3 {
+    width: 90px;
+    height: 2px;
+    display: inline-block;
+    background: #f9a84c;
+  }
+/*for blog-section*/
+
+.swiper {
+    height: 480px;
+    width: 445px;
+    padding: 0px 15px;
 }
 
-.bton:hover {
-    background-color: var(--secondarycolor); 
+.swiper-wrapper{
+    margin: 10px;
+  
+}
+.swiper-slide .collabe-bg {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
 }
 
-.fa-solid {
-    font-size: 4rem;
-    
-} 
+.swiper-slide .news-detail {
+    height: 190px;
+    width: 382px;
+    background: #fff;
+    color: #000;    
+    margin-top: -75px;
+    z-index: 999;
+    left: 4%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 1px 1px 9px 1px #0000004d;
+
+    & p{
+        font-size: 17px;
+    }
+}
+
+
+
+
+
+
+/*testimonial-section*/
+
+
+.testimonial-section {
+    height: 635px;
+    width: 625px;
+}
+  
+.tour-reviews {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    border-bottom: 1px dashed #ececec;
+}
+
+.tour-reviews .info {
+    float: left;
+    text-align: center;
+}  
+
+.tour-reviews .info .logoc {
+    margin-bottom: 20px;
+    border-radius: 100%;
+    border: 6px solid #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.09);
+    height: 94px;
+    object-fit: contain;
+    width: 100px;
+}
+
+.tour-reviews .info_name {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Quicksand", sans-serif;
+}
+
+.tour-reviews .content {
+  width: 100%;
+  padding-left: 170px;
+}
+
+.tour-reviews .title {
+    margin: 10px 0;
+    font-size: 1.333em;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.tour-reviews .description {
+    color: #686868;
+}
+
+.tour-reviews .rating {
+    margin-top: 10px;
+    color: #ffcd47;
+    font-size: 1.2em;
+}
+  
+.rating .testi {
+    font-size: 14px;
+    color: #000;
+    background: #f89406;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
 
 /*******  Contact Section  End ******/
 
