@@ -1,24 +1,54 @@
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+/***** CONTACT Section *****/
+
+.location {
+  padding: 8rem 0;
+
+  & iframe {
+      width: 100%;
   }
-  
-  .slider-container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+}
+
+.contact .row {
+  display: flex;
+}
+
+.contact-col {
+  flex-basis: 50%;
+  margin-bottom: 3rem;
+
+  & div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+
+      & .bx {
+          font-size: 2.8rem;
+          color: var(--main-color);
+          margin: 1rem;
+          margin-right: 3rem;
+      }
+
+      & h5 {
+          font-size: 2rem;
+          margin-bottom: .5rem;
+          color: #777;
+          font-weight: 400;
+      }
   }
-  
-  .slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
-    flex: 0 0 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #ccc;
-  }
-  
+}
+
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 1.7rem;
+  outline: none;
+  border: .1rem solid #777;
+  box-sizing: border-box;
+}
+
+.ff-btn {
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+}

@@ -1,20 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/CSS/c.css">
-  <title>Auto Slider</title>
+  <title>Bhaktapur Multiple Campus</title>
+  <link rel="stylesheet" href="../CSS/c.css">
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-  <div class="slider-container">
-    <div class="slider">
-      <div class="slide">Slide 1</div>
-      <div class="slide">Slide 2</div>
-      <div class="slide">Slide 3</div>
-      <!-- Add more slides as needed -->
+  <!-- ========== Start NAVBAR Section ========== -->
+  <header class="nav-section">
+    <div class="nav container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="">
+        <!-- Bhaktapur Multiple Campus -->
+        BMC
+      </a>
+
+      <ul class="navbar">
+        <li><a href="index.html">home</a></li>
+        <li><a href="index.html#news">news & events</a></li>
+        <li><a href="index.html#courses">course</a></li>
+        <li><a href="index.html#scholorship">scholorship</a></li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+
+      <div class="btn">
+        <i class='bx bx-mail-send'></i>
+        <a href="apply.html">Apply Now</a>
+      </div>
+
+      <i class="bx bx-menu" id="menu"></i>
+    </div>
+  </header>
+  <!-- ========== End NAVBAR Section ========== -->
+
+  <section class="container">
+    <div class="location">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17691.487260828464!2d144.86979331462544!3d-38.38501300400106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad5c5be847c6443%3A0xc871ff58d2728e7d!2sNeptours!5e0!3m2!1sne!2snp!4v1710004032016!5m2!1sne!2snp"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    <div class="contact">
+      <div class="row">
+        <div class="contact-col">
+          <div>
+            <i class='bx bxs-institution'></i>
+            <span>
+              <h5>Dudhpati,Bhaktapur</h5>
+            </span>
+          </div>
+          <div>
+            <i class='bx bxs-phone'></i>
+            <span>
+              <h5>016610200, 016613199</h5>
+            </span>
+          </div>
+          <div>
+            <i class='bx bxs-envelope-open'></i>
+            <span>
+              <h5>info@bmcbkt.edu.np</h5>
+            </span>
+          </div>
+        </div>
+        <div class="contact-col">
+          <form action="" method="post" onsubmit="SendMail(); reset(); return false">
+            <input type="text" name="name" placeholder="ENTER YOUR FULL NAME" id="name" required autocomplete="off">
+            <input type="email" name="email" placeholder="ENTER YOUR E-MAIL" id="email" required autocomplete="off">
+            <input type="text" name="subject" placeholder="SUBJECT" id="subject" required autocomplete="off">
+            <textarea rows="8" name="message" placeholder="MESSAGE***" id="message" required></textarea>
+            <button type="submit" class="btn ff-btn">SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Start FOOTER Section ========== -->
+
+  <section class="footer">
+    <div class="footer-container container">
+      <h2>BMC</h2>
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <li><a href="#">Infrastructure</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Facilities</a></li>
+        <li><a href="#">FAQs</a></li>
+      </div>
+
+      <div class="footer-box">
+        <h3>Faculty</h3>
+        <li><a href="#">Institute of Science and Technology</a></li>
+        <li><a href="#">Faculty of Management</a></li>
+        <li><a href="#">Faculty of Humanities and Social Science</a></li>
+      </div>
+
+      <div class="footer-box">
+        <h3>Contact</h3>
+        <li><a href="#">016610200</a></li>
+        <li><a href="#">info@bmc.edu.np</a></li>
+        <div class="social">
+          <a href=""><i class='bx bxl-facebook'></i></a>
+          <a href=""><i class='bx bxl-twitter'></i></a>
+          <a href=""><i class='bx bxl-instagram'></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Bhaktapur Multiple Campus. All Right Reserved</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="wrapper">
+      <div class="button">
+        <a href="">
+          <div class="icon">
+            <i class="bx bx-question-mark"></i>
+          </div>
+          <span>Get Help</span>
+        </a>
+      </div>
     </div>
   </div>
-  <script src="/CSS/c.js"></script>
+
+  <!-- ========== End FOOTER Section ========== -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
