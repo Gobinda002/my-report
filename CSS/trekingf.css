@@ -167,7 +167,8 @@ header {
     border-radius: 20px;
     overflow: hidden;
     position: relative; 
-    cursor: pointer;     
+    cursor: pointer;   
+      
 }
 .card .card-img {
     width: 100%;
@@ -175,7 +176,8 @@ header {
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
-    transition: .5s ease-in;
+    
+
 }
 
 .card-title {
@@ -187,5 +189,9 @@ header {
 .card-body {
     padding: 1rem;
     text-align: center;
+    color: #000;
+    height: 12px;
+    width: 12px;
+    
 }
 
