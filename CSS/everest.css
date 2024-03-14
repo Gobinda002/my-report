@@ -12,20 +12,6 @@
     box-sizing: border-box;
 }
 
-
-html {
-    font-size: 62.5%;
-    font-family: 'arial', sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
 /** SCROLLBAR **/
 
 ::-webkit-scrollbar {
@@ -37,12 +23,42 @@ li {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #fc7c12;
+    background: var(--maincolor);
     border-radius: 1rem;
 
 }
 
-/* ***Navbar section *** */
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: 'arial', sans-serif;
+}
+
+body {
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 7rem 0 3rem;
+    margin: 0 auto;
+}
+
+/** ========= Navbar ================== **/
+
 
 header .sticky {
     background: white;
@@ -53,10 +69,10 @@ header .sticky {
 header {
     display: block;
     width: 100%;
-    position: fixed;
+    position: fixed;    
     z-index: 100;
     transition: .3s linear;
-
+    
 
 }
 
