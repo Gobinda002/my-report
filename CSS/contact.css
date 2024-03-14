@@ -2,159 +2,159 @@
 
 
 * {
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    transition: all.2s linear;
-    box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  transition: all.2s linear;
+  box-sizing: border-box;
 }
 
 /** SCROLLBAR **/
 
 ::-webkit-scrollbar {
-    width: .9rem;
+  width: .9rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--maincolor);
-    border-radius: 1rem;
+  background: var(--maincolor);
+  border-radius: 1rem;
 
 }
 
 
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    font-family: 'arial', sans-serif;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: 'arial', sans-serif;
 }
 
 body {
-    color: var(--text-color);
+  color: var(--text-color);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 section {
-    padding: 7rem 0 3rem;
-    margin: 0 auto;
+  padding: 7rem 0 3rem;
+  margin: 0 auto;
 }
 
 /** ========= Navbar ================== **/
 
 
 header .sticky {
-    background: white;
-    box-shadow: 1px 1px 18px #808080;
+  background: white;
+  box-shadow: 1px 1px 18px #808080;
 
 }
 
 header {
-    display: block;
-    width: 100%;
-    position: fixed;    
-    z-index: 100;
-    transition: .3s linear;
-    
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transition: .3s linear;
+
 
 }
 
 .nav-section.shadow {
-    box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: .8rem;
-    font-size: 2.5rem;
-    color: var(--text-color);
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: .15rem;
-    margin-left: 3rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .15rem;
+  margin-left: 3rem;
 
-    & img {
-        width: 3.8rem;
-    }
+  & img {
+    width: 3.8rem;
+  }
 }
 
 .navbar {
-    display: flex;
-    gap: 4rem;
+  display: flex;
+  gap: 4rem;
 
-    & a {
-        color: var(--text-color);
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        position: relative;
-        transition: .3s linear;
+  & a {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    transition: .3s linear;
 
-        &::after {
-            position: absolute;
-            content: '';
-            background: var(--secondarycolor);
-            height: .2rem;
-            width: 100%;
-            bottom: -.2rem;
-            left: 0;
-            transform: scaleX(0);
-            transition: .3s linear;
-        }
+    &::after {
+      position: absolute;
+      content: '';
+      background: var(--secondarycolor);
+      height: .2rem;
+      width: 100%;
+      bottom: -.2rem;
+      left: 0;
+      transform: scaleX(0);
+      transition: .3s linear;
     }
+  }
 }
 
 .navbar a:hover::after {
-    transform: scale(1);
+  transform: scale(1);
 
 }
 
 .navbar a:hover {
-    color: var(--maincolor);
+  color: var(--maincolor);
 }
 
 .inout {
-    display: flex;
-    gap: 2rem;
-    margin-right: 3rem;
+  display: flex;
+  gap: 2rem;
+  margin-right: 3rem;
 
-    & a {
-        color: var(--text-color);
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        position: relative;
-        transition: .3s linear;
-    }
+  & a {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    transition: .3s linear;
+  }
 }
 
 .inout a:hover {
-    color: var(--maincolor);
+  color: var(--maincolor);
 }
 
 
@@ -172,51 +172,72 @@ header {
 
 .location {
   & iframe {
-      width: 100%;
+    width: 100%;
   }
 }
 
 .contact .row {
   display: flex;
+  
 }
 
 .contact-col {
   flex-basis: 50%;
-  margin-bottom: 3rem;
+}
 
-  & div {
-      display: flex;
-      align-items: center;
-      margin-bottom: 4rem;
-
-      & .bx {
-          font-size: 2.8rem;
-          color: var(--main-color);
-          margin: 1rem;
-          margin-right: 3rem;
-      }
-
-      & h5 {
-          font-size: 2rem;
-          margin-bottom: .5rem;
-          color: #777;
-          font-weight: 400;
-      }
+.title{
+  font-size: 20px;
+  padding: 8rem 15rem;
+  
+  & h1{
+    font-weight: 500
+    ;
   }
+
+  & p{
+    margin-top: 10px;
+    font-weight: 400;
+  }
+}  
+
+.mixed{
+  display: flex;
+  gap: 10rem;
+  padding: 0rem 15rem;
 }
 
-.contact-col input,
-.contact-col textarea {
+.contact-section {
   width: 100%;
-  padding: 1.5rem;
-  margin-bottom: 1.7rem;
-  outline: none;
-  border: .1rem solid #777;
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f2f2f2;
 }
 
-.ff-btn {
-  border: none;
-  outline: none;
-  font-size: 1.8rem;
+.icon-container {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.contact-section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.contact-section a {
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
 }
