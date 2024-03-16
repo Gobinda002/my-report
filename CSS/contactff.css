@@ -158,35 +158,32 @@ header {
 }
 
 
+/* contact section */
 
-
-
-
-
-
-
-
-
-/***** Map Section *****/
-
-
-.location {
-  & iframe {
-    width: 100%;
-  }
-}
-.contact{
-  display: flex;
+.Location {
+    & iframe {
+      width: 100%;
+    }
 }
 
-.contact-col {
-  flex-basis: 50%;
+.contact {
+    background-color: aqua;
+    display: flex;
+    height: 44.5rem;
+    width: auto;
 }
 
-.title{
+.contact-col{
+    width: 50%;
+}
+
+.cons{
+  padding: 5rem 15rem;
+}
+
+.cons .title{
   font-size: 20px;
-  padding: 8rem 15rem;
-  
+
   & h1{
     font-weight: 500
     ;
@@ -196,15 +193,14 @@ header {
     margin-top: 10px;
     font-weight: 400;
   }
-}  
+}
 
-/* ***Contact section*** */
-.contt{
-  padding: 0rem 15rem;
+.cons .number{
+  padding: 5rem 0rem;
   display: flex;
   gap: 5rem;
-  
 }
+
 
 .contact-section {
   width: 50%;
@@ -214,10 +210,7 @@ header {
   padding: 20px;
   box-shadow: 0 16px 50px rgba(0, 0, 0, .4);
 
-  & h2{
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
+  
   
 }
 
@@ -228,24 +221,75 @@ header {
   align-items: center;
   justify-content: center;
   margin-right: 20px;
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .text-container {
   flex: 1;
+  & h2{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
-
 
 .contact-section a {
   display: block;
   font-size: 18px;
   text-decoration: none;
   color: #333;
+  font-weight: 500;
 }
 
-/* form section */
+
+/* foem page */
 
 .page{
-  background-color: aqua;
-  
+  background-color: #45a049;
+  height:50rem;
+  width: 60rem;
+  margin-top: -5rem;
+  padding: 50px 200px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.page {
+  background-color: #f2f2f2;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -5rem;
+  width: 60rem;
 }
