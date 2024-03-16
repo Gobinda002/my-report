@@ -167,7 +167,7 @@ header {
 }
 
 .contact {
-    background-color: aqua;
+    background-color: #f1faee;
     display: flex;
     height: 44.5rem;
     width: auto;
@@ -272,7 +272,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #fc7c12;
   color: white;
   padding: 15px 20px;
   border: none;
@@ -281,9 +281,6 @@ input[type="submit"] {
   font-size: 16px;
 }
 
-input[type="submit"]:hover {
-  background-color: #45a049;
-}
 
 .page {
   background-color: #f2f2f2;
