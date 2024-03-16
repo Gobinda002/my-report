@@ -1,52 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-  
 
-/** BASE RULE**/
 
-*{    
+* {
     font-family: 'Poppins', sans-serif;
-    padding: 0; margin: 0;    
-    box-sizing: border-box;    
-    outline: none; border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
     transition: all.2s linear;
-    box-sizing: border-box;    
+    box-sizing: border-box;
 }
 
-html{
+/** SCROLLBAR **/
+
+::-webkit-scrollbar {
+    width: .9rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--maincolor);
+    border-radius: 1rem;
+
+}
+
+
+
+html {
+    font-size: 62.5%;
     scroll-behavior: smooth;
+    font-family: 'arial', sans-serif;
 }
 
-body{
-    background: var(--bgcolor);
-    color: var(--textcolor);
+body {
+    color: var(--text-color);
 }
 
-a{
+a {
     text-decoration: none;
-    
 }
 
-li{
+li {
     list-style: none;
 }
 
-img{
+img {
     width: 100%;
-    height: 100%;
 }
 
-/* Variable declare */
-:root{
-    --bg-color:#fff;
-    --textcolor: #221314;
-    --secondcolor:#5a7184;
-    --mainecolor:#6e54fa;
-    --maincolor:#fc7c12; 
-    --secondarycolor:#d66500; 
-    --bigfont: 3rem;
-    --h2font:1.5rem;
-    --pfont:1.1rem;
+section {
+    padding: 7rem 0 3rem;
+    margin: 0 auto;
 }
+
 
 /** MODULE RESUABLE **/
 
@@ -55,7 +65,6 @@ img{
     font-size: 50px;
     color: var(--maincolor);     
 }
-
 
 .heading {
     text-align: center;    
@@ -74,14 +83,15 @@ img{
 
 
 .btn {
+    cursor: pointer;
     display: inline-flex;
     align-items: center;
     background: var(--maincolor);
-    padding: .8rem 1.5rem;
+    padding: 1rem 2rem;
     border-radius: 5rem;
-    color: #fff;
+    color: #000;
     transition:  ease .1s ;
-    font-size: 16px;
+    font-size: 2rem;
     
     & i {
         font-size: 2rem;
@@ -101,10 +111,22 @@ img{
 }
 
 
+:root{
+    --bg-color:#fff;
+    --textcolor: #221314;
+    --secondcolor:#5a7184;
+    --mainecolor:#6e54fa;
+    --maincolor:#fc7c12; 
+    --secondarycolor:#d66500; 
+    --bigfont: 3rem;
+    --h2font:1.5rem;
+    --pfont:1.1rem;
+}
 
 /** SCROLLBAR **/
+
 ::-webkit-scrollbar{
-    width: .7rem;
+    width: .9rem;
 }
 ::-webkit-scrollbar-track{
     background: transparent;
@@ -115,87 +137,115 @@ img{
     
 }
 
-/** LAYOUT **/
-/* .container{
-    height: 100vh;
+/** ========= Navbar ================== **/
+
+
+header .sticky {
+    background: white;
+    box-shadow: 1px 1px 18px #808080;
+
+}
+
+header {
+    display: block;
     width: 100%;
-    margin: 0 auto;
-} */
-
-section{
-    padding: 7rem 0 3rem;
-    margin: 0 auto;
-}
-
-/** ============= NAVBAR ============== **/
-
-header.sticky{
-    background: var(--maincolor);
-    box-shadow: 1px 1px 18px #808080;   
+    position: fixed;    
+    z-index: 100;
+    transition: .3s linear;
+    
 
 }
-header{
-    position: fixed;
-    width: 70%;
-    z-index: 1;
+
+.nav-section.shadow {
+    box-shadow: var(--box-shadow);
+}
+
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
-    padding: 20px 18%;
-    transition: ease .40s;
-    border-radius: 3rem;
-    margin: 20px  0 0 20rem;
-
+    padding: 2rem 0;
 }
 
-.logo{
-    font-size: 35px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--bg-color);
+    letter-spacing: .15rem;
+    margin-left: 3rem;
 
+    & img {
+        width: 3.8rem;
+    }
 }
 
 .navbar {
     display: flex;
-      
-    & a {
-      position: relative;
-      color: var(--bg-color);
-      font-size: var(--pfont);
-      font-weight: 500;
-      padding: 10px 22px;
-    }
-  
-    & a::after {
-      content: ""; /* Add an empty content for the pseudo-element */
-      display: block;
-      position: absolute;      
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: transparent; /* Initial color */
-      border-radius: 2px; /* Border radius for a rounded appearance */
-      transform: scaleX(0);
-      transition: .2s linear;
-    }
-  
-    & a:hover::after {
-      background-color: var(--mainecolor); /* Color change on hover */
-      transform: scale(1);
-    }
+    gap: 4rem;
 
-    & :hover{
-        color: var(--textcolor);
+    & a {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+        transition: .3s linear;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background: var(--secondarycolor);
+            height: .2rem;
+            width: 100%;
+            bottom: -.2rem;
+            left: 0;
+            transform: scaleX(0);
+            transition: .3s linear;
+        }
     }
 }
 
+.navbar a:hover::after {
+    transform: scale(1);
+
+}
+
+.navbar a:hover {
+    color: var(--maincolor);
+}
+
+.inout {
+    display: flex;
+    gap: 2rem;
+    margin-right: 3rem;
+
+    & a {
+        color: var(--text-color);
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        position: relative;
+        transition: .3s linear;
+    }
+}
+
+.inout a:hover {
+    color: var(--maincolor);
+}
+
+
+
+
 /** ========= HOME ================== **/
+
 .home{ 
     height: 100vh;
     width: 100%;
-    background-image: url('/images/501211-everest-4k-wallpaper.jpg');
+    background-image: url('../images/501211-everest-4k-wallpaper.jpg');
     background-size: cover;   
     background-position: center;
 }
@@ -206,12 +256,14 @@ header{
     transform: translateY(-50%);
     margin-left: 25vh;
 }
+
 .home-text h1{
     font-size: var(--bigfont);
     padding-top: 8vh;
     color: var(--bg-color);
     font-family: 'Paytone One', sans-serif;  
     letter-spacing: 4px;  
+    
 }
 
 .home-text p{
@@ -237,6 +289,7 @@ header{
     }
 }
 
+
 /*******  Most Popular Packages ******/
 
 .packages{
@@ -248,7 +301,7 @@ header{
 .packages .allpack{     
     display: grid;
     width: 90%;
-    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(50rem,1fr)); 
     grid-gap: 3rem;
     margin-top: 2rem;
     
@@ -266,10 +319,10 @@ header{
 
 .card-img{    
     width: 100%;
-    height: 100%;
+    height: 100%; 
     object-fit: cover;
     border-radius: 10px;
-    transition: .5s ease-in-out;
+    transition: .5s ease-in;
 }
 
 .card-body{
@@ -288,12 +341,13 @@ header{
     transition: 1s ;
     overflow: hidden;
     & h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 600;
+        color: var(--maincolor);
     }
 
     & p{
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 600;
         
         overflow: hidden;
@@ -309,8 +363,20 @@ header{
     font-weight: 500;
 }
 
-.pkbtn{    
+.card .btn{    
     width: 8rem;
+}
+#see{
+    font-size: 2rem;
+    color: #fff;
+    background-color: #d66500;
+    padding: 1rem 17rem;
+    border-radius: 4rem;   
+    margin-top: auto; 
+
+    &:hover{
+        color: black;
+    }
 }
 
 /*******  END Most Popular Packages ******/
@@ -318,57 +384,71 @@ header{
 
 /*******  Category Section ******/
 
+
 .cat-title{
     color: var(--maincolor);
-    font-size: 2rem;
-    
+    font-size: 4rem;
+    margin-left: 12%;
 }
 
 .row-item{
-    /* display: flex;
-    justify-content: space-around; */
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(25rem,1fr));
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 5rem 0 5rem;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    width: 90%;
+    margin-left: auto;
+    & h2 {
+        font-size: 3rem; 
+        color: var(--maincolor);  
+        margin: 10px 0;  
+    }
+
 }
 
 .item{
-    border: 3px solid red;
-    border-radius: 2rem;
-    
-}
-#cat-pic{
-    height: 15rem;
-    width: 15rem;
-    overflow: hidden;
-    
-}
-
-h2{
+    height: 30rem;
+    width: 30rem;    
     text-align: center;
+    border: 2px solid red;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;    
+    align-items: center;    
 }
 
-
-/**
-
-.service .box-container{    
-    display: flex;
-    flex-wrap: wrap;
-    margin-left:110px ;
-    margin-top:5% ;   
+ 
+.item:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px 1px rgba(255, 123, 0, 0.932);
+}
+   
+#cat-pic{
+    width: 25rem;    
+    height: auto;    
 }
 
-.service .box-container .box{
-    height: 300px;
-    width: 30%;
-    margin:  15px 10px;
+/*******  END Most Popular Packages ******/
+
+/*******  Services ******/
+
+
+.box-container{   
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(50rem,1fr));
+    width: 90%;
+}
+
+.box-container .box{
+    height: 30rem;
+    width: 50rem;
+    margin:  5rem 15rem;
     border-radius:30px ;    
-    padding: 2px;
     text-align: center;  
     
+    & img{
+        height: 10rem;
+        width: 10rem;
+    }
    
 }
 .service .box-container .box i{
@@ -391,138 +471,224 @@ h2{
     box-shadow: 0 16px 50px rgba(0, 0, 0, .4);
 }
 
+/*******  Services End ******/
 
-.top{
-    background-color:var(--maincolor);
-    height: 250px;
-    width: 90%;    
-    margin:55px 0 0 100px;
-    border-radius: 15px;
-    color: #ffffff;
-    
+
+/*******  blogs and review section ******/
+
+.mixed {
+    padding: 60px 0;
+    background-color:#f1faee;
 }
 
-.contact h1{
+.ro {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50rem;
+    gap: 10rem;
+}
+
+.blo {
+    height: 655px;
+    width: 445px;
+    padding: 0px 15px;
+}
+
+
+.head-title{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.head-title .title__primary{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+    margin-top: 0;
+    text-transform: capitalize;
     font-size: 40px;
-    padding: 30px 0 0 100px ;
-    
-    
+    color: #253d52;
+    font-weight: 600;
 }
-.contact p{
-    font-size: 30px;
-    padding: 20px 0 0 100px ;
-    
+
+.title-line{
+    margin-top: -10px;
 }
-.contact h2{
-    padding: 25px 0 0 0 ;
+
+.tl-1 {
+    width: 90px;
+    height: 2px;
+    display: inline-block;
+    background: #f9a84c;
+}
+  
+.tl-2 {
+    display: inline-block;
+    height: 12px;
+    margin: 0 5px;
+    position: relative;
+    top: 5px;
+    width: 12px;
+    border: 2px solid #f9a84c;
+    border-radius: 50px;
+}
+  
+.tl-3 {
+    width: 90px;
+    height: 2px;
+    display: inline-block;
+    background: #f9a84c;
+}
+
+
+.swiper { /*for blog-section*/
+    height: 480px;
+    width: 445px;
+    padding: 0px 15px;
+}
+
+.swiper-wrapper{
+    margin: 10px;
+  
+}
+.swiper-slide .collabe-bg {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+}
+
+.swiper-slide .news-detail {
+    height: 190px;
+    width: 382px;
+    background: #fff;
+    color: #000;    
+    margin-top: -75px;
+    z-index: 999;
+    left: 4%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 1px 1px 9px 1px #0000004d;
+
+    & .post-info{
+        font-size: 15px;
+    }
+
+    & p{
+        font-size: 17px;
+    }
+
+    & a{
+        font-size: 18px;
+    }
+
+    & .blog-read{
+        color: #fff;
+        background-color: #F89406;
+        border-radius: 6px;
+        padding: 2px 10px;
+
+        &:hover{
+            color: #000;
+        }
+    }
+
+}
+
+.testimonial-section { /*testimonial-section*/
+    height: 635px;
+    width: 625px;
+}
+  
+.tour-reviews {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+    border-bottom: 1px dashed #ececec;
+    font-size: 14px;
+}
+
+.tour-reviews .info {
+    float: left;
     text-align: center;
-    
+}  
+
+.tour-reviews .info .logoc {
+    margin-bottom: 20px;
+    border-radius: 100%;
+    border: 6px solid #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.09);
+    height: 94px;
+    object-fit: contain;
+    width: 100px;
 }
 
-.talk  p{
-    font-size: 20px;
-    padding: 15px 0 0 10px;
-    text-align: center;
+.tour-reviews .info_name {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Quicksand", sans-serif;
 }
 
-.support-cs{
-    display: flex;
-    justify-content: center;
-    margin-top: 90px;
-    margin-left: 500px;
-    height: 45%;
-    width: 45vh; 
-    gap: 13%;
+.tour-reviews .content {
+  width: 100%;
+  padding-left: 170px;
 }
 
-.support-cs .talk{    
-    background-color: darkgray;      
-    border: 2px solid ;
-    border-radius: 30px;
-    
-    
-    
-}
-.fa-solid {
-    padding: 50px 0 0 180px;
-    
+.tour-reviews .title {
+    margin: 10px 0;
+    font-size: 1.333em;
+    font-weight: 700;
+    font-style: normal;
 }
 
-
-
-.bton{    
-    height: 70px;
-    width: 160px;
-    border-radius: 15px;   
-    font-size: 20px;
-    margin: 25px 130px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: white; 
-    color: black; 
-    border: 2px solid black;
+.tour-reviews .description {
+    color: #686868;
 }
 
-.bton:hover {
-    background-color: var(--maincolor);
-    color: white;
+.tour-reviews .rating {
+    margin-top: 10px;
+    color: #ffcd47;
+    font-size: 1.2em;
 }
-   
-.bton :hover{
-    background-color: blue;
-    color: white;
-}
-
-.about{
-    background-color: transparent;
-    height: 350px;
-    width: 40vh;  
-    font-size: 20px; 
-    box-sizing: border-box;
-     
-    
-}
-
-.other{
-    
-    background-color: aqua;
-    height: 350px;
-    width: 80%;
-    padding-left: 30px; 
-    font-size: 20px;
-    display: flex;
-    gap: 60px;
-   
-    
-    
-}
-
-.fot{
-    background-color: #eef8ff;
+  
+.rating .testi {
+    font-size: 14px;
+    color: #000;
+    background: #f89406;
+    padding: 5px 10px;
+    border-radius: 6px;
 }
 
 
+/*******  review and blogs Section  End ******/
+
+/*******  Footer Section  ******/
 footer{  
-    width: 100%;
-    margin-top: 120px;
-    bottom: 0;
-    background:url('/images/bf footer.png') ;
-    color: black;
-    padding: 100px 0 30px;
-    border-top-left-radius: 125px;
-    font-size: 13px;
-    line-height: 20px;
 
+    background-image: url('../images/bf footer.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 20px 0;            
+    color: #fff;    
+    margin-top: 120px;
+    bottom: 0;    
+    color: black;     
+    font-size:2rem;    
 }
 
 .about{
     
-    width: 85%;  
+    width: 90%;  
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-between;    
+    font-size: 1.8rem;   
    
 }
 
@@ -531,11 +697,7 @@ footer{
     padding: 30px;
 
 }
-.logo{
-    width: 80px;
-    margin-bottom: 30px;
-    
-}
+
 .col h3{
     width: fit-content;
     margin-bottom: 40px;
@@ -553,24 +715,6 @@ ul li{
     margin-bottom: 12px;
 
 }
-/* .social .fa-brands{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: var(--maincolor);
-    margin-right: 10px;
-    cursor: pointer;
-}
-.social :hover{
-    transform: rotate(360deg);
-    transition: 1s;
-    color: #fff;
-    background-color: #000;
-} */
 
 .social a i{
     height: 40px;
@@ -598,28 +742,7 @@ hr{
 }
 .copyright{
     text-align: center;
+    color: #fff;
 }
 
-.main-container {
-    margin: 4rem auto;
-    max-width: 1000px;
-    margin-bottom: 4rem;
-}
-
-*, *::after, *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0px;
-}
-
-.contact .main-container form {
-    width: 100%;
-    max-width: 600px;
-    color: hsl(0deg, 0%, 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin: 0 auto;
-}
+/*******  Footer Section  End ******/
