@@ -1,3 +1,34 @@
+<?php
+
+include("../db_connection.php");
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    session_start();
+    $usename = $_POST['username'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    $cpass = $_POST['cpass'];
+
+    // hash the password before storing it into database
+    $hashed_password = password_hash($pass, PASSWORD_BCRYPT);
+
+    // inserting the user info into the database
+    $sql = "INSERT INTO user (name,email,pass,cpass)  VALUES (?,?,?,?)";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssss",$username, $email, $pass, $cpass);
+
+    if($stmt->execute()){
+        echo "Registration sucessful";
+        header("location: index.php");
+        $stmt->close();
+    }else{
+        echo"Error" . $stmt->error;
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +116,7 @@
         <form>
             <div class="form-group">
                 <label for="register-username">Username</label>
-                <input type="text" id="register-username" name="register-username" required>
+                <input type="text" id="register-username" name="username" required>
             </div>
             <div class="form-group">
                 <label for="register-email">Email</label>
@@ -93,11 +124,11 @@
             </div>
             <div class="form-group">
                 <label for="register-password">Password</label>
-                <input type="password" id="register-password" name="register-password" required>
+                <input type="password" id="register-password" name="pass" required>
             </div>
             <div class="form-group">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <input type="password" id="confirm-password" name="cpass" required>
             </div>
             
             <button type="submit" class="btn">Register</button>

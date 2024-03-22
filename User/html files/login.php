@@ -1,5 +1,49 @@
+<?php
+// Include the database connection file
+require ('../db_connection.php');
+
+// Initialize the session
+session_start();
+
+// Check if the user is already logged in, redirect to index.php
+if (isset ($_SESSION['email'])) {
+    header("Location: index.php");
+    exit();
+}
+
+// Check if the form is submitted 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Get user inputs
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Query to check if the user exists
+    $sql = "SELECT * FROM user WHERE email = '$email' AND pass = '$password'";
+    $result = mysqli_query($conn, $sql);
+
+    if (!$result) {
+        die ('Error in query: ' . mysqli_error($conn));
+    }
+
+    // Check if a matching user is found
+    if (mysqli_num_rows($result) > 0) {
+        // Store user details in the session
+        $_SESSION['email'] = $email;
+
+        // Redirect to the index page
+        header("Location: index.php");
+        exit();
+    } else {
+        $error_message = "Invalid email or password";
+    }
+}
+
+// Close the database connection
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,6 +123,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="login-container">
         <h2>Login</h2>
@@ -94,8 +139,9 @@
             <button type="submit" class="btn">Login</button>
         </form>
         <div class="switch-form">
-            <p>Don't have an account? <a href="register.html" id="switch-to-register">Register</a></p>
+            <p>Don't have an account? <a href="register.php" id="switch-to-register">Register</a></p>
         </div>
     </div>
 </body>
+
 </html>
