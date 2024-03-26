@@ -262,23 +262,29 @@ header {
     background-color: aqua;
 }
 
-.itineary-title{
+/* .itineary-title{
     padding: 20px 0 15px 30px;
     background-color: #d66500;
     & .title{
         font-size: 25px;
         font-weight: 600;
     }
-}
+} */
 
 .abc{
-    
+    position: relative;
 
     & .title{
         font-size: 20px;
         background-color: #fc7c12;
         width: 300px;
         padding: 10px 0 10px 10px;
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 14.3rem;
+        background-color: #fc7c12;
+        z-index: 0;
     }
 
     & .addinfo{
@@ -286,3 +292,26 @@ header {
         font-size: 18px;
     }
 }
+
+.addinfo {
+    padding: 10px 15px 10px 50px;
+    font-size: 18px;
+}
+
+
+
+.itineary-title {
+    position: sticky;
+    top: 8rem;
+    z-index: 1;
+    width: 100%;
+    
+    padding: 20px 0 15px 30px;
+    background-color: #d66500;
+}
+
+.itineary-title .title {
+    font-size: 25px;
+    font-weight: 600;
+}
+

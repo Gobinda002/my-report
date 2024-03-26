@@ -235,16 +235,22 @@
         var itineary_btn = document.querySelector('.two-topic--btn .topic-btn-itineary');
         var policy_btn = document.querySelector('.two-topic--btn .topic-btn-policies');
         var itineary = document.querySelector('.itineary');
-        var polocies = document.querySelector('.policies');
+        var policies = document.querySelector('.policies');
+
+        itineary_btn.style.backgroundColor = 'red';
 
         itineary_btn.onclick = () => {
             itineary.style.display = 'block';
             policies.style.display = 'none';
+            itineary_btn.style.backgroundColor = 'red';
+            policy_btn.style.backgroundColor = '';
         }
 
         policy_btn.onclick = () => {
             itineary.style.display = 'none';
             policies.style.display = 'block';
+            policy_btn.style.backgroundColor = 'red';
+            itineary_btn.style.backgroundColor = '';
         }
 
     </script>
